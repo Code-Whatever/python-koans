@@ -1,7 +1,7 @@
 # Using this file for creating and testing koans.
 
 def determine_if_valid_answer():
-    valid_answer = ("abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890 ,.' ()")
+    valid_characters = ("abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890 ()',.")
 
 def test_assign_value_to_variable():
     movie = "The Breakfast Club" 
