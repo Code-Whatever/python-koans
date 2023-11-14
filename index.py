@@ -1,9 +1,10 @@
 # Using this file for creating and testing koans.
+import unittest
 
-def determine_if_valid_answer():
-    valid_characters = ("abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890 ()',.")
+class AboutVariables(unittest.TestCase):
 
-def test_assign_value_to_variable():
-    movie = "The Breakfast Club" 
-    print(movie)
-test_assign_value_to_variable()
+    def test_assign_value_to_variable(self):
+        self.assertTrue(True)
+
+if __name__ == '__main__':
+    unittest.main()
