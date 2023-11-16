@@ -48,9 +48,13 @@ class AboutNumericTypes(unittest.TestCase):
         self.assertEqual(True, isinstance(complex_number, complex))
 
 class AboutSquenceTypes(unittest.TestCase):
-    def test_create_string_list(self):
+    def test_create_list(self):
         string_list = ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"]
-        self.assertGreaterEqual(len(string_list), 4, "List is empty. You must enter three strings inside the square brackets.")
+        self.assertGreaterEqual(len(string_list), 4, "You must enter three strings inside the square brackets.")
+
+    def test_create_tuple(self):
+        tuple = ("Pet Sounds", "Revolver", "Evolution", "Are You Experienced?")
+        self.assertGreaterEqual(len(tuple), 4, "You must enter three strings inside the square brackets.")
 
 if __name__ == '__main__':
     unittest.main()
