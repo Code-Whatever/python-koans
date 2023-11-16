@@ -1,7 +1,7 @@
 # Using this file for creating and testing koans.
 import unittest
 
-class AboutDataTypes(unittest.TestCase):
+class AboutStrings(unittest.TestCase):
     def test_string_using_double_quotes(self):
         string = "spam"
         self.assertEqual(True, isinstance(string, str))
@@ -18,7 +18,9 @@ class AboutDataTypes(unittest.TestCase):
             Get back
             I'm alright, Jack, keep your hands off of my stack
         '''
-        self.assertEqual(True, isinstance(multiline_string, str))
+        lines = multiline_string.strip().split('\n')
+        self.assertTrue(isinstance(multiline_string, str) and len(lines) >= 3, "Multi-line string must have at least 3 lines.")
+        self.assertGreater(len(multiline_string), 10, "Multi-line string is empty. You must enter at least 10 characters")        
 
     def test_assign_multiline_string_using_double_quotes(self):
         multiline_string = """
@@ -26,11 +28,18 @@ class AboutDataTypes(unittest.TestCase):
             'Tis but a scratch!
             A scratch? Your arm's off!
             No, it isn't.
-            What's that, then?
+            Well what's that, then?
             [after a pause] I've had worse.
             You liar!
         """
-        self.assertEqual(True, isinstance(multiline_string, str))
+        lines = multiline_string.strip().split('\n')
+        self.assertTrue(isinstance(multiline_string, str) and len(lines) >= 3, "Multi-line string must have at least 3 lines.")
+        self.assertGreater(len(multiline_string), 10, "Multi-line string is empty. You must enter at least 10 characters")
+
+class AboutNumbers(unittest.TestCase):
+    def test_assign_integer(self):
+        integer = 5
+        self.assertEqual(True, isinstance(integer, int))
 
 if __name__ == '__main__':
     unittest.main()
