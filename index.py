@@ -39,5 +39,12 @@ class AboutNumbers(unittest.TestCase):
         integer = 5
         self.assertEqual(True, isinstance(integer, int))
 
+    def test_assign_float_number(self):
+        float_number = 2.5
+        self.assertEqual(True, isinstance(float_number, float))
+
+    def test_assign_complex_number(self):
+        complex_number = 7j
+        self.assertEqual(True, isinstance(complex_number, complex))
 if __name__ == '__main__':
     unittest.main()
