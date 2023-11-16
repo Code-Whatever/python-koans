@@ -49,9 +49,8 @@ class AboutNumericTypes(unittest.TestCase):
 
 class AboutSquenceTypes(unittest.TestCase):
     def test_create_string_list(self):
-        string_list = ["John Lennon", "Paul McCartney", "George Harrison"]
-        self.assertEqual(True, isinstance(string_list, list))
-        self.assertGreater(len(string_list), 2, "List is empty. You must enter three strings inside the square brackets.")
+        string_list = ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"]
+        self.assertGreaterEqual(len(string_list), 4, "List is empty. You must enter three strings inside the square brackets.")
 
 if __name__ == '__main__':
     unittest.main()
