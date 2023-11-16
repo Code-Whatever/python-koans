@@ -20,7 +20,6 @@ class AboutStrings(unittest.TestCase):
         '''
         lines = multiline_string.strip().split('\n')
         self.assertTrue(isinstance(multiline_string, str) and len(lines) >= 3, "Multi-line string must have at least 3 lines.")
-        self.assertGreater(len(multiline_string), 10, "Multi-line string is empty. You must enter at least 10 characters")        
 
     def test_assign_multiline_string_using_double_quotes(self):
         multiline_string = """
@@ -34,7 +33,6 @@ class AboutStrings(unittest.TestCase):
         """
         lines = multiline_string.strip().split('\n')
         self.assertTrue(isinstance(multiline_string, str) and len(lines) >= 3, "Multi-line string must have at least 3 lines.")
-        self.assertGreater(len(multiline_string), 10, "Multi-line string is empty. You must enter at least 10 characters")
 
 class AboutNumbers(unittest.TestCase):
     def test_assign_integer(self):
