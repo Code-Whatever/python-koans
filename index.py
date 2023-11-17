@@ -47,14 +47,18 @@ class AboutNumericTypes(unittest.TestCase):
         complex_number = 158j
         self.assertEqual(True, isinstance(complex_number, complex))
 
-class AboutSquenceTypes(unittest.TestCase):
+class AboutSequenceTypes(unittest.TestCase):
     def test_create_list(self):
         string_list = ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"]
-        self.assertGreaterEqual(len(string_list), 4, "You must enter three strings inside the square brackets.")
+        self.assertGreaterEqual(len(string_list), 4, "You must enter at least four strings inside the square brackets.")
+        for item in string_list:
+            self.assertGreaterEqual(len(item), 4, "Each string in the list must have at least four characters.")
 
     def test_create_tuple(self):
-        tuple = ("Pet Sounds", "Revolver", "Evolution", "Are You Experienced?")
-        self.assertGreaterEqual(len(tuple), 4, "You must enter three strings inside the square brackets.")
+        my_tuple = ("Pet Sounds", "Revolver", "Evolution", "Headquarters")
+        self.assertGreaterEqual(len(my_tuple), 4, "You must enter at least four strings inside the parentheses.")
+        for item in my_tuple:
+            self.assertGreaterEqual(len(item), 4, "Each string in the tuple must have at least four characters.")
 
 if __name__ == '__main__':
     unittest.main()
