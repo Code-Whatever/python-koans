@@ -61,8 +61,13 @@ class AboutSequenceTypes(unittest.TestCase):
             self.assertGreaterEqual(len(item), 4, "Each string in the tuple must have at least four characters.")
 
     def test_create_range(self):
-        x = range()
-        self.assertEqual(True, isinstance(x, range))
+        numbers = range(5)
+        self.assertEqual(True, isinstance(numbers, range))
+
+class AboutMappingType(unittest. TestCase):
+    def test_dictionary(self):
+        song = {"title": "Tomorrow Never Knows", "songwriter(s)": "Lennon-McCartney", "album": "Revolver", "artist": "The Beatles"}
+        self.assertGreaterEqual(len(song), 4, "You must enter at least four strings inside the curly brackets.")
 
 if __name__ == '__main__':
     unittest.main()
