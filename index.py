@@ -60,5 +60,9 @@ class AboutSequenceTypes(unittest.TestCase):
         for item in my_tuple:
             self.assertGreaterEqual(len(item), 4, "Each string in the tuple must have at least four characters.")
 
+    def test_create_range(self):
+        x = range()
+        self.assertEqual(True, isinstance(x, range))
+
 if __name__ == '__main__':
     unittest.main()
