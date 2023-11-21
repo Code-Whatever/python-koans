@@ -85,8 +85,21 @@ class AboutBooleanType(unittest.TestCase):
 
 class AboutBinaryTypes(unittest.TestCase):
     def test_bytes(self):
-        y = b"Hello, world!"
-        self.assertEqual(True, isinstance(y, bytes))
+        binary_test1 = b"Hello, world!"
+        self.assertEqual(True, isinstance(binary_test1, bytes))
+
+    def test_bytearray(self):
+        binary_test2 = bytearray(5)
+        self.assertEqual(True, isinstance(binary_test2, bytearray))
+    
+    def test_memoryview(self):
+        binary_test3 = memoryview(bytes(3))
+        self.assertEqual(True, isinstance(binary_test3, memoryview))
+
+class AboutNoneType(unittest.TestCase):
+    def test_none(self):
+        y = None
+        self.assertEqual(True, isinstance(y, None))
 
 if __name__ == '__main__':
     unittest.main()
