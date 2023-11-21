@@ -69,5 +69,24 @@ class AboutMappingType(unittest. TestCase):
         song = {"title": "Tomorrow Never Knows", "songwriter(s)": "Lennon-McCartney", "album": "Revolver", "artist": "The Beatles"}
         self.assertGreaterEqual(len(song), 4, "You must enter at least four strings inside the curly brackets.")
 
+class AboutSetTypes(unittest.TestCase):
+    def test_set(self):
+        subjects = {"Programming", "Business", "Economics", "Law", "Psychology", "History"}
+        self.assertEqual(True, isinstance(subjects, set))
+    
+    def test_frozenset(self):
+        movies = frozenset({"Picture Snatcher", "Casablanca", "Singin' in the Rain", "The Sound of Music", "The Godfather", "The Breakfast Club", "L.A. Confidential", "Casino Royale", "The Hateful Eight"})
+        self.assertEqual(True, isinstance(movies, frozenset))
+
+class AboutBooleanType(unittest.TestCase):
+    def test_boolean(self):
+        x = True
+        self.assertEqual(True, isinstance(x, bool))
+
+class AboutBinaryTypes(unittest.TestCase):
+    def test_bytes(self):
+        y = b"Hello, world!"
+        self.assertEqual(True, isinstance(y, bytes))
+
 if __name__ == '__main__':
     unittest.main()
