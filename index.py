@@ -105,5 +105,7 @@ class AboutNoneType(unittest.TestCase):
         x = None
         self.assertIsNone(x)
 
+#class AboutArithmeticOperators(unittest.TestCase):
+
 if __name__ == '__main__':
     unittest.main()
