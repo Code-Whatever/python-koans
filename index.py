@@ -98,8 +98,8 @@ class AboutBinaryTypes(unittest.TestCase):
 
 class AboutNoneType(unittest.TestCase):
     def test_none(self):
-        y = None
-        self.assertEqual(True, isinstance(y, None))
+        x = None
+        self.assertIsNone(x)
 
 if __name__ == '__main__':
     unittest.main()
