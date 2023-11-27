@@ -81,7 +81,11 @@ class AboutSetTypes(unittest.TestCase):
 class AboutBooleanType(unittest.TestCase):
     def test_boolean(self):
         x = True
-        self.assertEqual(True, isinstance(x, bool))
+        self.assertTrue(True, isinstance(x, bool))
+
+    def test_boolean_false(self):
+        y = False
+        self.assertFalse(False, isinstance(y, bool))
 
 class AboutBinaryTypes(unittest.TestCase):
     def test_bytes(self):
