@@ -105,7 +105,48 @@ class AboutNoneType(unittest.TestCase):
         x = None
         self.assertIsNone(x)
 
-#class AboutArithmeticOperators(unittest.TestCase):
+class AboutArithmeticOperators(unittest.TestCase):
+    def test_add(self):
+        a = 5
+        b = 10
+        answer = a + b
+        self.assertEqual(answer, a + b)
+
+    def test_subtract(self):
+        c = 9
+        d = 5
+        answer = c - d
+        self.assertEqual(answer, c - d)
+
+    def test_multiply(self):
+        e = 10
+        f = 6
+        answer = e * f
+        self.assertEqual(answer, e * f)
+    
+    def test_divide(self):
+        g = 35
+        h = 7
+        answer = g / h
+        self.assertEqual(answer, g / h)
+
+    def test_modulo(self):
+        i = 5
+        j = 2
+        answer = i % j
+        self.assertEqual(answer, i % j)
+    
+    def test_exponent(self):
+        k = 3
+        l = 3
+        answer = k ** l
+        self.assertEqual(answer, k ** l)
+
+    def test_floor_division(self):
+        m = 25
+        n = 2
+        answer = m // n
+        self.assertEqual(answer, m // n)
 
 if __name__ == '__main__':
     unittest.main()
