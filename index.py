@@ -178,9 +178,20 @@ class AboutAssignmentOperators(unittest.TestCase):
         f %= 2
         self.assertEqual(f, 1)
 
-    #def test_exponent_assign(self):
-    
-    #def test_floor_division_assign(self):
+    def test_floor_division_assign(self):
+        g = 9
+        g //= 3
+        self.assertEqual(g, 3) 
+
+    def test_exponent_assign(self):
+        h = 3
+        h **= 3
+        self.assertEqual(h, 27)
+
+    def test_and_assign(self):
+        i = 10
+        i &= 3
+        self.assertEqual(i, 2)
 
 if __name__ == '__main__':
     unittest.main()
