@@ -1,25 +1,33 @@
 # Using this file for creating and testing koans.
 import unittest
 
+
 class AboutTextTypes(unittest.TestCase):
     def test_string_using_double_quotes(self):
         string = "spam"
         self.assertEqual(True, isinstance(string, str))
-        self.assertGreaterEqual(len(string), 3, "You must enter at least three characters")
+        self.assertGreaterEqual(
+            len(string), 3, "You must enter at least three characters"
+        )
 
     def test_string_using_single_quotes(self):
-        string = 'eggs'
+        string = "eggs"
         self.assertEqual(True, isinstance(string, str))
-        self.assertGreaterEqual(len(string), 3, "You must enter at least three characters")
+        self.assertGreaterEqual(
+            len(string), 3, "You must enter at least three characters"
+        )
 
     def test_assign_multiline_string_using_single_quotes(self):
-        multiline_string = '''
+        multiline_string = """
             Money
             Get back
             I'm alright, Jack, keep your hands off of my stack
-        '''
-        lines = multiline_string.strip().split('\n')
-        self.assertTrue(isinstance(multiline_string, str) and len(lines) >= 3, "Multi-line string must have at least 3 lines.")
+        """
+        lines = multiline_string.strip().split("\n")
+        self.assertTrue(
+            isinstance(multiline_string, str) and len(lines) >= 3,
+            "Multi-line string must have at least 3 lines.",
+        )
 
     def test_assign_multiline_string_using_double_quotes(self):
         multiline_string = """
@@ -31,8 +39,12 @@ class AboutTextTypes(unittest.TestCase):
             [after a pause] I've had worse.
             You liar!
         """
-        lines = multiline_string.strip().split('\n')
-        self.assertTrue(isinstance(multiline_string, str) and len(lines) >= 3, "Multi-line string must have at least 3 lines.")
+        lines = multiline_string.strip().split("\n")
+        self.assertTrue(
+            isinstance(multiline_string, str) and len(lines) >= 3,
+            "Multi-line string must have at least 3 lines.",
+        )
+
 
 class AboutNumericTypes(unittest.TestCase):
     def test_assign_integer(self):
@@ -47,36 +59,89 @@ class AboutNumericTypes(unittest.TestCase):
         complex_number = 158j
         self.assertEqual(True, isinstance(complex_number, complex))
 
+
 class AboutSequenceTypes(unittest.TestCase):
     def test_create_list(self):
-        string_list = ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"]
-        self.assertGreaterEqual(len(string_list), 4, "You must enter at least four strings inside the square brackets.")
+        string_list = [
+            "John Lennon",
+            "Paul McCartney",
+            "George Harrison",
+            "Ringo Starr",
+        ]
+        self.assertGreaterEqual(
+            len(string_list),
+            4,
+            "You must enter at least four strings inside the square brackets.",
+        )
         for item in string_list:
-            self.assertGreaterEqual(len(item), 4, "Each string in the list must have at least four characters.")
+            self.assertGreaterEqual(
+                len(item),
+                4,
+                "Each string in the list must have at least four characters.",
+            )
 
     def test_create_tuple(self):
         my_tuple = ("Pet Sounds", "Revolver", "Evolution", "Headquarters")
-        self.assertGreaterEqual(len(my_tuple), 4, "You must enter at least four strings inside the parentheses.")
+        self.assertGreaterEqual(
+            len(my_tuple),
+            4,
+            "You must enter at least four strings inside the parentheses.",
+        )
         for item in my_tuple:
-            self.assertGreaterEqual(len(item), 4, "Each string in the tuple must have at least four characters.")
+            self.assertGreaterEqual(
+                len(item),
+                4,
+                "Each string in the tuple must have at least four characters.",
+            )
 
     def test_create_range(self):
         numbers = range(5)
         self.assertEqual(True, isinstance(numbers, range))
 
-class AboutMappingType(unittest. TestCase):
+
+class AboutMappingType(unittest.TestCase):
     def test_dictionary(self):
-        song = {"title": "Tomorrow Never Knows", "songwriter(s)": "Lennon-McCartney", "album": "Revolver", "artist": "The Beatles"}
-        self.assertGreaterEqual(len(song), 4, "You must enter at least four strings inside the curly brackets.")
+        song = {
+            "title": "Tomorrow Never Knows",
+            "songwriter(s)": "Lennon-McCartney",
+            "album": "Revolver",
+            "artist": "The Beatles",
+        }
+        self.assertGreaterEqual(
+            len(song),
+            4,
+            "You must enter at least four strings inside the curly brackets.",
+        )
+
 
 class AboutSetTypes(unittest.TestCase):
     def test_set(self):
-        subjects = {"Programming", "Business", "Economics", "Law", "Psychology", "History"}
+        subjects = {
+            "Programming",
+            "Business",
+            "Economics",
+            "Law",
+            "Psychology",
+            "History",
+        }
         self.assertEqual(True, isinstance(subjects, set))
-    
+
     def test_frozenset(self):
-        movies = frozenset({"Picture Snatcher", "Casablanca", "Singin' in the Rain", "The Sound of Music", "The Godfather", "The Breakfast Club", "L.A. Confidential", "Casino Royale", "The Hateful Eight"})
+        movies = frozenset(
+            {
+                "Picture Snatcher",
+                "Casablanca",
+                "Singin' in the Rain",
+                "The Sound of Music",
+                "The Godfather",
+                "The Breakfast Club",
+                "L.A. Confidential",
+                "Casino Royale",
+                "The Hateful Eight",
+            }
+        )
         self.assertEqual(True, isinstance(movies, frozenset))
+
 
 class AboutBooleanType(unittest.TestCase):
     def test_boolean(self):
@@ -87,6 +152,7 @@ class AboutBooleanType(unittest.TestCase):
         y = False
         self.assertFalse(False, isinstance(y, bool))
 
+
 class AboutBinaryTypes(unittest.TestCase):
     def test_bytes(self):
         binary_test1 = b"Hello, world!"
@@ -95,15 +161,17 @@ class AboutBinaryTypes(unittest.TestCase):
     def test_bytearray(self):
         binary_test2 = bytearray(5)
         self.assertEqual(True, isinstance(binary_test2, bytearray))
-    
+
     def test_memoryview(self):
         binary_test3 = memoryview(bytes(3))
         self.assertEqual(True, isinstance(binary_test3, memoryview))
+
 
 class AboutNoneType(unittest.TestCase):
     def test_none(self):
         x = None
         self.assertIsNone(x)
+
 
 class AboutArithmeticOperators(unittest.TestCase):
     def test_add(self):
@@ -123,7 +191,7 @@ class AboutArithmeticOperators(unittest.TestCase):
         f = 6
         answer = e * f
         self.assertEqual(answer, e * f)
-    
+
     def test_divide(self):
         g = 35
         h = 7
@@ -135,18 +203,19 @@ class AboutArithmeticOperators(unittest.TestCase):
         j = 2
         answer = i % j
         self.assertEqual(answer, i % j)
-    
+
     def test_exponent(self):
         k = 3
         l = 3
-        answer = k ** l
-        self.assertEqual(answer, k ** l)
+        answer = k**l
+        self.assertEqual(answer, k**l)
 
     def test_floor_division(self):
         m = 25
         n = 2
         answer = m // n
         self.assertEqual(answer, m // n)
+
 
 class AboutAssignmentOperators(unittest.TestCase):
     def test_assign(self):
@@ -167,7 +236,7 @@ class AboutAssignmentOperators(unittest.TestCase):
         d = 5
         d *= 7
         self.assertEqual(d, 35)
-    
+
     def test_devide_assign(self):
         e = 50
         e /= 5
@@ -181,7 +250,7 @@ class AboutAssignmentOperators(unittest.TestCase):
     def test_floor_division_assign(self):
         g = 9
         g //= 3
-        self.assertEqual(g, 3) 
+        self.assertEqual(g, 3)
 
     def test_exponent_assign(self):
         h = 3
@@ -193,6 +262,7 @@ class AboutAssignmentOperators(unittest.TestCase):
         i &= 3
         self.assertEqual(i, 2)
 
+
 class AboutComparisonOperators(unittest.TestCase):
     def test_equal(self):
         x = 5
@@ -203,7 +273,7 @@ class AboutComparisonOperators(unittest.TestCase):
         x = 6
         y = 7
         self.assertNotEqual(x, y)
-    
+
     def test_greater_than(self):
         x = 10
         y = 5
@@ -224,5 +294,22 @@ class AboutComparisonOperators(unittest.TestCase):
         y = 5
         self.assertLessEqual(x, y)
 
-if __name__ == '__main__':
+
+class AboutLogicalOperators(unittest.TestCase):
+    def test_logical_and(self):
+        x = 5
+        result = x > 2 and x < 20
+        self.assertTrue(result)
+
+    def test_logical_or(self):
+        x = 10
+        result = x > 5 or x < 15
+        self.assertTrue(result)
+
+    def test_logical_not_and(self):
+        x = 15
+        result = not(x > 10 and x < 20)
+        self.assertFalse(result)
+
+if __name__ == "__main__":
     unittest.main()
