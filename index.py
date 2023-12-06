@@ -203,6 +203,24 @@ class AboutComparisonOperators(unittest.TestCase):
         x = 6
         y = 7
         self.assertNotEqual(x, y)
+    
+    def test_greater_than(self):
+        x = 10
+        y = 5
+        self.assertGreater(x, y)
+
+    def test_less_than(self):
+        x = 5
+        y = 10
+        self.assertLess(x, y)
+
+    def test_greater_than_equal(self):
+        x = 10
+        y = 10
+
+    def test_less_than_equal(self):
+        x = 5
+        y = 5
 
 if __name__ == '__main__':
     unittest.main()
