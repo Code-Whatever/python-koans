@@ -193,5 +193,16 @@ class AboutAssignmentOperators(unittest.TestCase):
         i &= 3
         self.assertEqual(i, 2)
 
+class AboutComparisonOperators(unittest.TestCase):
+    def test_equal(self):
+        x = 5
+        y = 5
+        self.assertEqual(x, y)
+
+    def test_not_equal(self):
+        x = 6
+        y = 7
+        self.assertNotEqual(x, y)
+
 if __name__ == '__main__':
     unittest.main()
