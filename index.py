@@ -312,17 +312,26 @@ class AboutLogicalOperators(unittest.TestCase):
         self.assertFalse(result)
 
 class AboutIdentityOperators(unittest.TestCase):
-    def test_is_true(self):
-        x = ["Edward G. Robinson", "James Cagney", "Humphrey Bogart"]
-        y = ["Bette Davis", "Barbara Stanwyck", "Rita Hayworth"]
-        z = x
-        self.assertTrue(x is z)
+    def test_is(self):
+        x = ["The Godfather", "Wiseguy"]
+        self.assertTrue(x is x)
 
-    def test_is_false(self):
-        x = ["Kid Galahad (1937)", "Angels with Dirty Faces", "The Maltese Falcon"]
-        y = ["The Letter", "Clash by Night", "Gilda"]
-        z = y
-        self.assertFalse(x is y)
+    def test_is_not(self):
+        x = ["Dragnet", "The Untouchables"]
+        y = ["Adam-12", "Miami Vice"]
+        self.assertTrue(x is not y)
+
+class AboutMembershipOperators(unittest.TestCase):
+    def test_in(self):
+        x = ["Monty Python"]
+        result = "Monty Python" in x
+        self.assertTrue(result)
+
+    def test_not_in(self):
+        y = ["Fawlty Towers"]
+        x = ["Monty Python"]
+        result = "Fawlty Towers" not in x
+        self.assertTrue(result)
 
 if __name__ == "__main__":
     unittest.main()
