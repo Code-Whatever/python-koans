@@ -308,8 +308,9 @@ class AboutLogicalOperators(unittest.TestCase):
 
     def test_logical_not_and(self):
         x = 15
-        result = not(x > 10 and x < 20)
+        result = not (x > 10 and x < 20)
         self.assertFalse(result)
+
 
 class AboutIdentityOperators(unittest.TestCase):
     def test_is(self):
@@ -320,6 +321,7 @@ class AboutIdentityOperators(unittest.TestCase):
         x = ["Dragnet", "The Untouchables"]
         y = ["Adam-12", "Miami Vice"]
         self.assertTrue(x is not y)
+
 
 class AboutMembershipOperators(unittest.TestCase):
     def test_in(self):
@@ -332,6 +334,7 @@ class AboutMembershipOperators(unittest.TestCase):
         x = ["Monty Python"]
         result = "Fawlty Towers" not in x
         self.assertTrue(result)
+
 
 if __name__ == "__main__":
     unittest.main()
