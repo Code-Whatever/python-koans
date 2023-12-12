@@ -311,5 +311,18 @@ class AboutLogicalOperators(unittest.TestCase):
         result = not(x > 10 and x < 20)
         self.assertFalse(result)
 
+class AboutIdentityOperators(unittest.TestCase):
+    def test_is_true(self):
+        x = ["Edward G. Robinson", "James Cagney", "Humphrey Bogart"]
+        y = ["Bette Davis", "Barbara Stanwyck", "Rita Hayworth"]
+        z = x
+        self.assertTrue(x is z)
+
+    def test_is_false(self):
+        x = ["Kid Galahad (1937)", "Angels with Dirty Faces", "The Maltese Falcon"]
+        y = ["The Letter", "Clash by Night", "Gilda"]
+        z = y
+        self.assertFalse(x is y)
+
 if __name__ == "__main__":
     unittest.main()
