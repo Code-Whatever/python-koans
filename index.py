@@ -4,14 +4,14 @@ import unittest
 
 class AboutTextTypes(unittest.TestCase):
     def test_string_using_double_quotes(self):
-        string = "spam"
+        string = ""
         self.assertEqual(True, isinstance(string, str))
         self.assertGreaterEqual(
             len(string), 3, "You must enter at least three characters"
         )
 
     def test_string_using_single_quotes(self):
-        string = "eggs"
+        string = ''
         self.assertEqual(True, isinstance(string, str))
         self.assertGreaterEqual(
             len(string), 3, "You must enter at least three characters"
@@ -21,7 +21,6 @@ class AboutTextTypes(unittest.TestCase):
         multiline_string = """
             Money
             Get back
-            I'm alright, Jack, keep your hands off of my stack
         """
         lines = multiline_string.strip().split("\n")
         self.assertTrue(
@@ -31,11 +30,6 @@ class AboutTextTypes(unittest.TestCase):
 
     def test_assign_multiline_string_using_double_quotes(self):
         multiline_string = """
-            Now stand aside, worthy adversary!
-            'Tis but a scratch!
-            A scratch? Your arm's off!
-            No, it isn't.
-            Well what's that, then?
             [after a pause] I've had worse.
             You liar!
         """
@@ -48,15 +42,15 @@ class AboutTextTypes(unittest.TestCase):
 
 class AboutNumericTypes(unittest.TestCase):
     def test_assign_integer(self):
-        integer = 5
+        integer = '4'
         self.assertEqual(True, isinstance(integer, int))
 
     def test_assign_float_number(self):
-        float_number = 64.8
+        float_number = '7.5'
         self.assertEqual(True, isinstance(float_number, float))
 
     def test_assign_complex_number(self):
-        complex_number = 158j
+        complex_number = '158j'
         self.assertEqual(True, isinstance(complex_number, complex))
 
 
@@ -64,8 +58,6 @@ class AboutSequenceTypes(unittest.TestCase):
     def test_create_list(self):
         string_list = [
             "John Lennon",
-            "Paul McCartney",
-            "George Harrison",
             "Ringo Starr",
         ]
         self.assertGreaterEqual(
@@ -81,7 +73,7 @@ class AboutSequenceTypes(unittest.TestCase):
             )
 
     def test_create_tuple(self):
-        my_tuple = ("Pet Sounds", "Revolver", "Evolution", "Headquarters")
+        my_tuple = ("Pet Sounds", "", "Evolution", "Headquarters")
         self.assertGreaterEqual(
             len(my_tuple),
             4,
@@ -103,7 +95,6 @@ class AboutMappingType(unittest.TestCase):
     def test_dictionary(self):
         song = {
             "title": "Tomorrow Never Knows",
-            "songwriter(s)": "Lennon-McCartney",
             "album": "Revolver",
             "artist": "The Beatles",
         }
@@ -117,10 +108,6 @@ class AboutMappingType(unittest.TestCase):
 class AboutSetTypes(unittest.TestCase):
     def test_set(self):
         subjects = {
-            "Programming",
-            "Business",
-            "Economics",
-            "Law",
             "Psychology",
             "History",
         }
