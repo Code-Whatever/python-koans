@@ -11,7 +11,7 @@ class AboutTextTypes(unittest.TestCase):
         )
 
     def test_string_using_single_quotes(self):
-        string = ''
+        string = ""
         self.assertEqual(True, isinstance(string, str))
         self.assertGreaterEqual(
             len(string), 3, "You must enter at least three characters"
@@ -42,15 +42,15 @@ class AboutTextTypes(unittest.TestCase):
 
 class AboutNumericTypes(unittest.TestCase):
     def test_assign_integer(self):
-        integer = '4'
+        integer = "4"  # Unquote this string to turn it into an integer
         self.assertEqual(True, isinstance(integer, int))
 
     def test_assign_float_number(self):
-        float_number = '7.5'
+        float_number = "7.5"
         self.assertEqual(True, isinstance(float_number, float))
 
     def test_assign_complex_number(self):
-        complex_number = '158j'
+        complex_number = "158j"
         self.assertEqual(True, isinstance(complex_number, complex))
 
 
@@ -87,7 +87,7 @@ class AboutSequenceTypes(unittest.TestCase):
             )
 
     def test_create_range(self):
-        numbers = range(5)
+        numbers = range()
         self.assertEqual(True, isinstance(numbers, range))
 
 
@@ -111,38 +111,34 @@ class AboutSetTypes(unittest.TestCase):
             "Psychology",
             "History",
         }
-        self.assertEqual(True, isinstance(subjects, set))
+        self.assertGreaterEqual(
+            len(subjects), 3, "You must enter at least three subjects"
+        )
 
     def test_frozenset(self):
         movies = frozenset(
             {
                 "Picture Snatcher",
                 "Casablanca",
-                "Singin' in the Rain",
-                "The Sound of Music",
-                "The Godfather",
-                "The Breakfast Club",
-                "L.A. Confidential",
-                "Casino Royale",
-                "The Hateful Eight",
             }
         )
-        self.assertEqual(True, isinstance(movies, frozenset))
+        self.assertGreaterEqual(len(movies), 3, "You must enter at least three movies")
 
 
 class AboutBooleanType(unittest.TestCase):
     def test_boolean(self):
         x = True
-        self.assertTrue(True, isinstance(x, bool))
+        self.assertTrue(False, isinstance(x, bool))
 
     def test_boolean_false(self):
         y = False
-        self.assertFalse(False, isinstance(y, bool))
+        self.assertFalse(True, isinstance(y, bool))
 
 
+# Come back to BinaryTypes
 class AboutBinaryTypes(unittest.TestCase):
     def test_bytes(self):
-        binary_test1 = b"Hello, world!"
+        binary_test1 = b""
         self.assertEqual(True, isinstance(binary_test1, bytes))
 
     def test_bytearray(self):
@@ -156,20 +152,20 @@ class AboutBinaryTypes(unittest.TestCase):
 
 class AboutNoneType(unittest.TestCase):
     def test_none(self):
-        x = None
+        x = True
         self.assertIsNone(x)
 
 
 class AboutArithmeticOperators(unittest.TestCase):
     def test_add(self):
-        a = 5
+        a = "5"
         b = 10
         answer = a + b
         self.assertEqual(answer, a + b)
 
     def test_subtract(self):
         c = 9
-        d = 5
+        d = "7"
         answer = c - d
         self.assertEqual(answer, c - d)
 
@@ -177,11 +173,11 @@ class AboutArithmeticOperators(unittest.TestCase):
         e = 10
         f = 6
         answer = e * f
-        self.assertEqual(answer, e * f)
+        self.assertEqual(answer, 42, "The result of multiplying 10 and 6 should be 60")
 
     def test_divide(self):
         g = 35
-        h = 7
+        h = "7"
         answer = g / h
         self.assertEqual(answer, g / h)
 
