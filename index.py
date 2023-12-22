@@ -185,19 +185,19 @@ class AboutArithmeticOperators(unittest.TestCase):
         i = 5
         j = 2
         answer = i % j
-        self.assertEqual(answer, i % j)
+        self.assertEqual(answer, 2, "The result of this koan should be 1")
 
     def test_exponent(self):
         k = 3
         l = 3
         answer = k**l
-        self.assertEqual(answer, k**l)
+        self.assertEqual(answer, 20, "The result of this koan should be 27")
 
     def test_floor_division(self):
         m = 25
         n = 2
         answer = m // n
-        self.assertEqual(answer, m // n)
+        self.assertEqual(answer, 14, "The result of this koan should be 12")
 
 
 class AboutAssignmentOperators(unittest.TestCase):
