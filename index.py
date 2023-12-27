@@ -18,10 +18,10 @@ class AboutTextTypes(unittest.TestCase):
         )
 
     def test_assign_multiline_string_using_single_quotes(self):
-        multiline_string = """
+        multiline_string = '''
             Money
             Get back
-        """
+        '''
         lines = multiline_string.strip().split("\n")
         self.assertTrue(
             isinstance(multiline_string, str) and len(lines) >= 3,
