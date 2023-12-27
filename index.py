@@ -11,7 +11,7 @@ class AboutTextTypes(unittest.TestCase):
         )
 
     def test_string_using_single_quotes(self):
-        string = ""
+        string = ''
         self.assertEqual(True, isinstance(string, str))
         self.assertGreaterEqual(
             len(string), 3, "You must enter at least three characters"
