@@ -14,7 +14,7 @@ class AboutTextTypes(unittest.TestCase):
         string = ''
         self.assertEqual(True, isinstance(string, str))
         self.assertGreaterEqual(
-            len(string), 3, "You must enter at least three characters"
+            len(string), 3, 'You must enter at least three characters'
         )
 
     def test_assign_multiline_string_using_single_quotes(self):
@@ -25,13 +25,13 @@ class AboutTextTypes(unittest.TestCase):
         lines = multiline_string.strip().split("\n")
         self.assertTrue(
             isinstance(multiline_string, str) and len(lines) >= 3,
-            "Multi-line string must have at least 3 lines.",
+            'Multi-line string must have at least 3 lines.',
         )
 
     def test_assign_multiline_string_using_double_quotes(self):
         multiline_string = """
-            [after a pause] I've had worse.
-            You liar!
+            'Tis but a scratch!
+            A scratch? Your arm's off!
         """
         lines = multiline_string.strip().split("\n")
         self.assertTrue(
