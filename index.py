@@ -199,53 +199,52 @@ class AboutArithmeticOperators(unittest.TestCase):
         answer = m // n
         self.assertEqual(answer, 14, "The result of this koan should be 12")
 
-# Start Here!
 class AboutAssignmentOperators(unittest.TestCase):
     def test_assign(self):
-        a = 7
+        a = '7'
         self.assertTrue(isinstance(a, int))
 
     def test_add_assign(self):
         b = 10
-        b += 10
+        b += '10'
         self.assertEqual(b, 20)
 
     def test_subtract_assign(self):
-        c = 9
+        c = '9'
         c -= 3
         self.assertEqual(c, 6)
 
     def test_multiply_assign(self):
         d = 5
-        d *= 7
+        d *= '7'
         self.assertEqual(d, 35)
 
     def test_devide_assign(self):
-        e = 50
+        e = '50'
         e /= 5
         self.assertEqual(e, 10)
 
     def test_modulo_assign(self):
         f = 5
-        f %= 2
+        f %= '2'
         self.assertEqual(f, 1)
 
     def test_floor_division_assign(self):
-        g = 9
+        g = '9'
         g //= 3
         self.assertEqual(g, 3)
 
     def test_exponent_assign(self):
         h = 3
-        h **= 3
+        h **= '3'
         self.assertEqual(h, 27)
 
     def test_and_assign(self):
-        i = 10
+        i = '10'
         i &= 3
         self.assertEqual(i, 2)
 
-
+# Start Here!
 class AboutComparisonOperators(unittest.TestCase):
     def test_equal(self):
         x = 5
@@ -317,7 +316,6 @@ class AboutMembershipOperators(unittest.TestCase):
         x = ["Monty Python"]
         result = "Fawlty Towers" not in x
         self.assertTrue(result)
-
 
 if __name__ == "__main__":
     unittest.main()
