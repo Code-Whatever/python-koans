@@ -33,3 +33,7 @@ class ExampleKoan(unittest.TestCase):
 if __name__ == "__main__":
     unittest.main()
 ```
+
+## How do you solve a Python koan?
+
+In the example shown above, we have a Python koan. In this koan, we first have to import a unittest module. The unittest module provides a framework for creating and running unit tests in Python. Once we import the unittest module, we then define a class that deals with the type of koan we are working with.
