@@ -21,9 +21,9 @@ Here is an example of a koan that is written in Python:
 import unittest
 
 
-class ExampleKoan(unittest.TestCase):
-    def example_koan(self):
-        string = ""
+class TestKoan(unittest.TestCase):
+    def string_koan(self):
+        movie = "Ratatouille"
         self.assertEqual(True, isinstance(string, str))
         self.assertGreaterEqual(
             len(string), 3, "You must enter at least three characters"
@@ -36,4 +36,8 @@ if __name__ == "__main__":
 
 ## How do you solve a Python koan?
 
-In the example shown above, we have a Python koan. In this koan, we first have to import a unittest module. The unittest module provides a framework for creating and running unit tests in Python. Once we import the unittest module, we then define a class that deals with the type of koan we are working with.
+In the example shown above, we have a Python koan.
+
+Before we worry about the koan, we need to import the unittest module, which will provide the tools we need to write unit tests. Next, we define a class named TestKoan that deals with the type of koan we are working with. Inside the class, we define a function that takes an input (self). Inside the function, we initialize a variable and give it a name and value. In the example above, we have a variable called "movie", and we assign it the value of "Ratatouille". After we have initialized the variable, the koan will check for two things: if the variable is a string, and if the variable contains at least three characters. If the variable does not contain at least three characters, an error will be raised.
+
+After we create the koan, we need to run it. In Python, the code snippet if ```__name__ == "__main__": unittest.main()``` plays an important role in ensuring efficient and targeted unit test execution. It determines if the code can be executed based on how the code is written. If the code can be executed, it executes ```unittest.main()```.
